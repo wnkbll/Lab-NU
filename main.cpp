@@ -111,11 +111,11 @@ int main(int argc, char **argv) {
     solution iterationSolution = iteration();
     solution newtonSolution = newton();
 
-    cout << "Метод: " << binarySolution.name << "; x = " <<  binarySolution.answer << "; " << "Кол-во итераций = " << binarySolution.counter << endl;
+    cout << "Method: " << binarySolution.name << "; x = " <<  binarySolution.answer << "; " << "Amount of iterations = " << binarySolution.counter << endl;
 
-    cout << "Метод: " << iterationSolution.name << "; x = " <<  iterationSolution.answer << "; " << "Кол-во итераций = " << iterationSolution.counter << endl;
+    cout << "Method: " << iterationSolution.name << "; x = " <<  iterationSolution.answer << "; " << "Amount of iterations = " << iterationSolution.counter << endl;
 
-    cout << "Метод: " << newtonSolution.name << "; x = " <<  newtonSolution.answer << "; " << "Кол-во итераций = " << newtonSolution.counter << endl;
+    cout << "Method: " << newtonSolution.name << "; x = " <<  newtonSolution.answer << "; " << "Amount of iterations = " << newtonSolution.counter << endl;
 
     return 0;
 }
