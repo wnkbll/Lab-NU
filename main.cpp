@@ -7,7 +7,6 @@ const double epsilon = 1e-6;
 
 
 struct solution {
-    string name;
     double answer;
     int counter;
 };
@@ -54,7 +53,7 @@ solution binary() {
         }
     }
 
-    return { "Binary", (a + b) / 2, counter };
+    return { (a + b) / 2, counter };
 }
 
 
@@ -78,7 +77,7 @@ solution iteration() {
         x_previous = x_current;
     }
 
-    return { "Iteration", x_current, counter };
+    return { x_current, counter };
 }
 
 
@@ -102,7 +101,7 @@ solution newton() {
         difference = abs(x_previous - x_current);
     }
 
-    return { "Newton", x_current, counter };
+    return { x_current, counter };
 }
 
 
@@ -111,11 +110,11 @@ int main(int argc, char **argv) {
     solution iterationSolution = iteration();
     solution newtonSolution = newton();
 
-    cout << "Method: " << binarySolution.name << "; x = " <<  binarySolution.answer << "; " << "Amount of iterations = " << binarySolution.counter << endl;
+    cout << "Method: binary; x = " <<  binarySolution.answer << "; " << "Amount of iterations = " << binarySolution.counter << endl;
 
-    cout << "Method: " << iterationSolution.name << "; x = " <<  iterationSolution.answer << "; " << "Amount of iterations = " << iterationSolution.counter << endl;
+    cout << "Method: iteration; x = " <<  iterationSolution.answer << "; " << "Amount of iterations = " << iterationSolution.counter << endl;
 
-    cout << "Method: " << newtonSolution.name << "; x = " <<  newtonSolution.answer << "; " << "Amount of iterations = " << newtonSolution.counter << endl;
+    cout << "Method: Newton; x = " <<  newtonSolution.answer << "; " << "Amount of iterations = " << newtonSolution.counter << endl;
 
     return 0;
 }
